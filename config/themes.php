@@ -59,11 +59,16 @@ return [
 
         'startbootstrap' => [
             'extends' => null,
-            'views-path' => '',
+            'views-path' => 'views',
             'asset-path' => '',
         ],
 
         // Add your themes here...
+
+        't1',
+        't2',
+        't3',
+
 
         /*--------------[ Example Structre ]-------------
 

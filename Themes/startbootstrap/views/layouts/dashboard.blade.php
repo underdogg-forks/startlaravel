@@ -1,7 +1,7 @@
 @extends('layouts.plane')
 
 @section('body')
- <div id="wrapper">
+    <div id="wrapper">
 
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
@@ -19,7 +19,7 @@
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-messages">
                         <li>
@@ -30,7 +30,8 @@
                                         <em>Yesterday</em>
                                     </span>
                                 </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...
+                                </div>
                             </a>
                         </li>
                         <li class="divider"></li>
@@ -42,7 +43,8 @@
                                         <em>Yesterday</em>
                                     </span>
                                 </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...
+                                </div>
                             </a>
                         </li>
                         <li class="divider"></li>
@@ -54,7 +56,8 @@
                                         <em>Yesterday</em>
                                     </span>
                                 </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...
+                                </div>
                             </a>
                         </li>
                         <li class="divider"></li>
@@ -70,7 +73,7 @@
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-tasks">
                         <li>
@@ -80,12 +83,12 @@
                                         <strong>Task 1</strong>
                                         <span class="pull-right text-muted">40% Complete</span>
                                     </p>
-                                   
-                                        <div>
+
+                                    <div>
                                         @include('widgets.progress', array('animated'=> true, 'class'=>'success', 'value'=>'40'))
-                                            <span class="sr-only">40% Complete (success)</span>
-                                        </div>
-                                   
+                                        <span class="sr-only">40% Complete (success)</span>
+                                    </div>
+
                                 </div>
                             </a>
                         </li>
@@ -97,12 +100,12 @@
                                         <strong>Task 2</strong>
                                         <span class="pull-right text-muted">20% Complete</span>
                                     </p>
-                                   
-                                        <div>
+
+                                    <div>
                                         @include('widgets.progress', array('animated'=> true, 'class'=>'info', 'value'=>'20'))
-                                            <span class="sr-only">20% Complete</span>
-                                        </div>
-                                   
+                                        <span class="sr-only">20% Complete</span>
+                                    </div>
+
                                 </div>
                             </a>
                         </li>
@@ -114,12 +117,12 @@
                                         <strong>Task 3</strong>
                                         <span class="pull-right text-muted">60% Complete</span>
                                     </p>
-                                    
-                                        <div>
+
+                                    <div>
                                         @include('widgets.progress', array('animated'=> true, 'class'=>'warning', 'value'=>'60'))
-                                            <span class="sr-only">60% Complete (warning)</span>
-                                        </div>
-                                   
+                                        <span class="sr-only">60% Complete (warning)</span>
+                                    </div>
+
                                 </div>
                             </a>
                         </li>
@@ -131,12 +134,12 @@
                                         <strong>Task 4</strong>
                                         <span class="pull-right text-muted">80% Complete</span>
                                     </p>
-                                    
-                                        <div>
+
+                                    <div>
                                         @include('widgets.progress', array('animated'=> true,'class'=>'danger', 'value'=>'80'))
-                                            <span class="sr-only">80% Complete (danger)</span>
-                                        </div>
-                                    
+                                        <span class="sr-only">80% Complete (danger)</span>
+                                    </div>
+
                                 </div>
                             </a>
                         </li>
@@ -153,7 +156,7 @@
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-alerts">
                         <li>
@@ -213,7 +216,7 @@
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
@@ -257,7 +260,7 @@
                         <li {{ (Request::is('*forms') ? 'class="active"' : '') }}>
                             <a href="{{ url ('forms') }}"><i class="fa fa-edit fa-fw"></i> Forms</a>
                         </li>
-                        <li >
+                        <li>
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li {{ (Request::is('*panels') ? 'class="active"' : '') }}>
@@ -282,7 +285,8 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span
+                                        class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="#">Second Level Item</a>
@@ -312,7 +316,8 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span
+                                        class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li {{ (Request::is('*blank') ? 'class="active"' : '') }}>
                                     <a href="{{ url ('blank') }}">Blank Page</a>
@@ -334,14 +339,14 @@
         </nav>
 
         <div id="page-wrapper">
-			 <div class="row">
+            <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">@yield('page_heading')</h1>
                 </div>
                 <!-- /.col-lg-12 -->
-           </div>
-			<div class="row">  
-				@yield('section')
+            </div>
+            <div class="row">
+                @yield('section')
 
             </div>
             <!-- /#page-wrapper -->

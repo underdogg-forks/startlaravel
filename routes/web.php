@@ -11,68 +11,63 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('home');
-});
-
-Route::get('/charts', function()
-{
-	return View::make('mcharts');
-});
-
-Route::get('/tables', function()
-{
-	return View::make('table');
-});
-
-Route::get('/forms', function()
-{
-	return View::make('form');
-});
-
-Route::get('/grid', function()
-{
-	return View::make('grid');
-});
-
-Route::get('/buttons', function()
-{
-	return View::make('buttons');
+Route::get('setTheme/{themeName}', function ($themeName) {
+    Session::put('themeName', $themeName);
+    return Redirect::to('/');
 });
 
 
-Route::get('/icons', function()
-{
-	return View::make('icons');
+Route::get('/', function () {
+    Session::put('themeName', 'startbootstrap');
+    return View::make('home');
+    //return Theme::get();
 });
 
-Route::get('/panels', function()
-{
-	return View::make('panel');
+Route::get('/charts', function () {
+    return View::make('mcharts');
 });
 
-Route::get('/typography', function()
-{
-	return View::make('typography');
+Route::get('/tables', function () {
+    return View::make('table');
 });
 
-Route::get('/notifications', function()
-{
-	return View::make('notifications');
+Route::get('/forms', function () {
+    return View::make('form');
 });
 
-Route::get('/blank', function()
-{
-	return View::make('blank');
+Route::get('/grid', function () {
+    return View::make('grid');
 });
 
-Route::get('/login', function()
-{
-	return View::make('login');
+Route::get('/buttons', function () {
+    return View::make('buttons');
 });
 
-Route::get('/documentation', function()
-{
-	return View::make('documentation');
+
+Route::get('/icons', function () {
+    return View::make('icons');
+});
+
+Route::get('/panels', function () {
+    return View::make('panel');
+});
+
+Route::get('/typography', function () {
+    return View::make('typography');
+});
+
+Route::get('/notifications', function () {
+    return View::make('notifications');
+});
+
+Route::get('/blank', function () {
+    return View::make('blank');
+});
+
+Route::get('/login', function () {
+    return View::make('login');
+});
+
+Route::get('/documentation', function () {
+    return View::make('documentation');
 });
