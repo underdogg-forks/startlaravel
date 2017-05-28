@@ -44,6 +44,13 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        if (config('app.debug') && ! $request->ajax()) {
+            $whoops = new \Whoops\Run;
+            $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+
+            return $whoops->handleException($exception);
+        }
+
         return parent::render($request, $exception);
     }
 
@@ -62,4 +69,26 @@ class Handler extends ExceptionHandler
 
         return redirect()->guest('login');
     }
+
+
+    protected function convertExceptionToResponse(Exception $e)
+    {
+        if (config('app.debug')) {
+            $whoops = new \Whoops\Run;
+            if (request()->wantsJson()) {
+                $whoops->pushHandler(new \Whoops\Handler\JsonResponseHandler());
+            } else {
+                $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+            }
+
+            return response()->make(
+                $whoops->handleException($e),
+                method_exists($e, 'getStatusCode') ? $e->getStatusCode() : 500,
+                method_exists($e, 'getHeaders') ? $e->getHeaders() : []
+            );
+        }
+
+        return parent::convertExceptionToResponse($e);
+    }
+
 }
