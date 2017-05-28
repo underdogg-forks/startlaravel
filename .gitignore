@@ -1,0 +1,17 @@
+# Please try and keep this file organized by alphabetical order. Single files first, then directories.
+.env
+/.idea
+
+
+Homestead.json
+Homestead.yaml
+
+/*.lock
+
+/config/lfm.php
+
+/node_modules
+/public/storage
+/storage/*.key
+/vendor
+
